@@ -1,0 +1,26 @@
+HOW TO INSTALL TENSORFLOW ON UBUNTU 20.04
+ STEP 1.CREATE A PROGRAMMING ENVIRONMENT 
+ Now create a new directory 
+        $ mkdir ~/tf-demo
+Now go to the directory
+        $cd ~/tf-demo
+To create a new virtual environment called tensorflow-dev, run command
+    $python3 -m venv tensorflow-dev
+This command create a new tensorflow-dev directory which contain all packages that you install  while environment is activated. It also includes pip and a standalone version of python
+Now activate your virtual environment
+  $source tensorflow-dev/bin/activate
+Once activated , your terminal prompt will reflect that you are in virtual environment
+ 
+STEP 2. INSTALLING TENSORFLOW
+ Now install tensorflow
+     $pip install --upgrade tensorflow
+STEP 3.VALIDATING INSTALLATION
+To validate the installation of tensorflow, we are going that we can import the tensorflow packages
+(tensorflow-dev) $ python
+The following prompt will appear on terminal
+>>>
+This the prompt for python interpreter ,and it ready for you to start entering some python
+First, type this line to import the TensorFlow package and make it available as the local variable tf. Press ENTER after typing in the line of code:
+ >>> import tensorflow as tf
+As long as you have received no error , you have installed tensorflow successfully.
+
