@@ -1,0 +1,48 @@
+Installing and configure pytorch 
+# Update your Ubuntu 20.04 instance.
+     sudo apt update 
+# Then the updates must be installed and upgraded.
+     sudo apt upgrade
+# If the instance to be used supports GPU/NVIDIA CUDA cores, and the PyTorch applications that you’re using support CUDA cores,
+#install the NVIDIA CUDA Toolkit.
+    sudo apt install nvidia-cuda-toolkit
+
+#USE CONDA TO INSTALL PYTORCH
+    #In your home directory, create a directory to install Anaconda and move into it.
+     mkdir anaconda
+  cd ~/anaconda
+#Download the Anaconda installation script using wget.
+    wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+#Give execute permission to the script.
+ chmod +x ./Anaconda3-2020.11-Linux-x86_64.sh
+
+#Then, execute the script.
+    sudo Anaconda3-2020.11-Linux-x86_64.sh
+  OR
+ bash  Anaconda3-2020.11-Linux-x86_64.sh
+
+Scroll through the license agreement and agree to it by entering yes. Indicate the destination directory for Anaconda. The default directory is ~/anaconda.
+
+#You are now ready to install PyTorch and PyTorch tools using Anaconda. From the ~/anaconda directory install PyTorch:
+      conda install pytorch torchvision torchaudio cudatoolkit=11.7 -c pytorch
+
+#If you don’t have access to Anaconda, PyTorch can be installed with Python Pip
+  #To install Pip, use the following command:
+    sudo apt install python3-pip
+#To install PyTorch using GPU/NVIDIA instances, use the following command:	
+      pip3 install -f torch torchvision
+TEST YOUR PYTORCH INSTALLATION
+# Enter the Python interpreter.
+            python3
+#The prompt should change to the python interpreter:
+   >>>
+#Import the PyTorch library functions.
+>>> import torch
+>>> 
+
+#Determine if PyTorch is using a GPU:
+  >>>print (torch.cuda.is_available)
+    TRUE
+#Determine if your server’s CUDA cards were found.
+     >>>print (torch.cuda.device_count)
+     >>>2
