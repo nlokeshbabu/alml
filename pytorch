@@ -45,4 +45,4 @@ TEST YOUR PYTORCH INSTALLATION
     TRUE
 #Determine if your server’s CUDA cards were found.
      >>>print (torch.cuda.device_count)
-     >>>2
+     >>>
